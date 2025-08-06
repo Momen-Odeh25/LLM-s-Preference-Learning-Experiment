@@ -1,0 +1,342 @@
+[
+    {
+        "id": 1,
+        "name": "Healthy Cooking Recipes",
+        "preferences": {
+            "content": {
+                "focus": "vegetarian recipes",
+                "dislikes": "red meat or dairy",
+                "dislikes_statement": "dislike red meat or dairy"
+            },
+            "stylistic": {
+                "tone": "encouraging and slightly informal tone",
+                "format": "concise, bulleted instructions"
+            }
+        },
+        "follow_up_question": "Okay, I'm planning a quick weeknight dinner. Can you suggest a healthy, vegetarian recipe that's super easy to make, and give me the steps in a friendly, bulleted list?",
+        "initial_user_prompt": "Hey! I'm trying to eat healthier and need some quick vegetarian recipe ideas. Definitely no red meat or dairy, please! And keep the instructions simple and encouraging."
+    },
+    {
+        "id": 2,
+        "name": "Travel Planning (Adventure Focus)",
+        "preferences": {
+            "content": {
+                "focus": "adventurous travel destinations",
+                "dislikes": "relaxing beach vacations",
+                "dislikes_statement": "dislike relaxing beach vacations"
+            },
+            "stylistic": {
+                "tone": "exciting, energetic tone",
+                "format": "short, punchy descriptions"
+            }
+        },
+        "follow_up_question": "I'm ready for my next big adventure! Where should I go for some serious thrills, and can you give me a quick, exciting pitch for three places?",
+        "initial_user_prompt": "I'm all about adventure travel! Think hiking, extreme sports, anything that gets the adrenaline pumping. No lazy beach trips for me. Give me some energetic ideas!"
+    },
+    {
+        "id": 3,
+        "name": "Personal Finance Advice (Long-term Investment)",
+        "preferences": {
+            "content": {
+                "focus": "long-term, low-risk investment strategies",
+                "dislikes": "speculative trading",
+                "dislikes_statement": "dislike speculative trading"
+            },
+            "stylistic": {
+                "tone": "formal, professional, and detailed explanation",
+                "format": "detailed explanation"
+            }
+        },
+        "follow_up_question": "I'm looking to secure my financial future. Can you explain a long-term, low-risk investment strategy in detail, with a professional tone?",
+        "initial_user_prompt": "I need some serious advice on long-term, low-risk investments. I'm thinking retirement planning, index funds, that kind of thing. Please be thorough and professional."
+    },
+    {
+        "id": 4,
+        "name": "Creative Writing Prompts (Fantasy Genre)",
+        "preferences": {
+            "content": {
+                "focus": "fantasy-themed writing prompts",
+                "dislikes": "modern-day settings or sci-fi",
+                "dislikes_statement": "dislike modern-day settings or sci-fi"
+            },
+            "stylistic": {
+                "tone": "evocative, descriptive language",
+                "format": "2-3 distinct ideas per prompt"
+            }
+        },
+        "follow_up_question": "I'm stuck on my fantasy novel. Can you give me a few more creative writing prompts, heavy on the magic and mythical creatures, with vivid descriptions?",
+        "initial_user_prompt": "I'm a fantasy writer looking for some fresh inspiration. Give me some creative prompts involving magic, mythical creatures, and epic quests. Make them really descriptive!"
+    },
+    {
+        "id": 5,
+        "name": "Tech Gadget Recommendations (Productivity Focus)",
+        "preferences": {
+            "content": {
+                "focus": "tech gadgets that enhance productivity",
+                "dislikes": "gaming peripherals or entertainment devices",
+                "dislikes_statement": "dislike gaming peripherals or entertainment devices"
+            },
+            "stylistic": {
+                "tone": "factual and objective",
+                "format": "list pros and cons clearly"
+            }
+        },
+        "follow_up_question": "I'm looking to upgrade my home office setup. What are three top tech gadgets for boosting productivity, and can you list their main pros and cons?",
+        "initial_user_prompt": "I'm all about productivity. Can you recommend some tech gadgets that help me get more done? I'm not really into gaming or entertainment tech."
+    },
+    {
+        "id": 6,
+        "name": "Historical Facts (Ancient Civilizations)",
+        "preferences": {
+            "content": {
+                "focus": "facts about ancient civilizations",
+                "dislikes": "military history",
+                "dislikes_statement": "dislike military history"
+            },
+            "stylistic": {
+                "tone": "narrative, storytelling style",
+                "format": "engaging language"
+            }
+        },
+        "follow_up_question": "Tell me something fascinating about daily life in ancient Rome, in a storytelling way. I'm curious about their culture!",
+        "initial_user_prompt": "I love learning about ancient civilizations, especially their daily life and culture. Think Egypt, Rome, Greece. Tell me a story about it, no battles please!"
+    },
+    {
+        "id": 7,
+        "name": "Fitness Routines (Bodyweight Strength)",
+        "preferences": {
+            "content": {
+                "focus": "bodyweight strength training exercises",
+                "dislikes": "gym equipment or cardio",
+                "dislikes_statement": "dislike gym equipment or cardio"
+            },
+            "stylistic": {
+                "tone": "motivating, encouraging tone",
+                "format": "clear, step-by-step instructions"
+            }
+        },
+        "follow_up_question": "I need a quick full-body bodyweight workout. Can you give me three exercises with clear, motivating instructions?",
+        "initial_user_prompt": "I'm looking for some bodyweight strength exercises, full-body routines are great. I don't have any gym equipment, and I'm not really into cardio. Motivate me!"
+    },
+    {
+        "id": 8,
+        "name": "Book Recommendations (Classic Literature)",
+        "preferences": {
+            "content": {
+                "focus": "classic literature",
+                "dislikes": "modern bestsellers or non-fiction",
+                "dislikes_statement": "dislike modern bestsellers or non-fiction"
+            },
+            "stylistic": {
+                "tone": "sophisticated, analytical tone",
+                "format": "insights into themes and characters"
+            }
+        },
+        "follow_up_question": "I'm in the mood for a classic novel with deep character development. Can you suggest one and give me a sophisticated analysis of its main character?",
+        "initial_user_prompt": "I'm a big fan of classic literature, especially novels from the 19th and early 20th centuries that focus on character development. No modern bestsellers, please. Give me some sophisticated recommendations."
+    },
+    {
+        "id": 9,
+        "name": "Home Decor Ideas (Minimalist Style)",
+        "preferences": {
+            "content": {
+                "focus": "minimalist home decor ideas",
+                "dislikes": "cluttered or ornate styles",
+                "dislikes_statement": "dislike cluttered or ornate styles"
+            },
+            "stylistic": {
+                "tone": "precise and practical",
+                "format": "bullet points for easy readability"
+            }
+        },
+        "follow_up_question": "I want to make my living room more minimalist. Can you give me three practical ideas for achieving a clean, functional look, in bullet points?",
+        "initial_user_prompt": "I'm looking for minimalist home decor ideas. Think clean lines, neutral colors, and functional pieces. I really dislike clutter and ornate styles. Give me some practical tips."
+    },
+    {
+        "id": 10,
+        "name": "Science Explanations (Astrophysics)",
+        "preferences": {
+            "content": {
+                "focus": "complex astrophysics concepts",
+                "dislikes": "oversimplification",
+                "dislikes_statement": "dislike oversimplification"
+            },
+            "stylistic": {
+                "tone": "accessible, enthusiastic, and slightly awe-inspiring tone",
+                "format": "use analogies"
+            }
+        },
+        "follow_up_question": "Explain the concept of dark matter to me like I'm a curious beginner, using an analogy and an enthusiastic tone!",
+        "initial_user_prompt": "I'm fascinated by astrophysics, especially things like black holes and dark matter. Can you explain some complex concepts to me in an enthusiastic, easy-to-understand way, maybe with an analogy?"
+    },
+    {
+        "id": 11,
+        "name": "Language Learning Tips (Spanish)",
+        "preferences": {
+            "content": {
+                "focus": "conversational practice and immersion",
+                "dislikes": "grammar drills or rote memorization",
+                "dislikes_statement": "dislike grammar drills or rote memorization"
+            },
+            "stylistic": {
+                "tone": "encouraging and practical",
+                "format": "short, actionable sentences"
+            }
+        },
+        "follow_up_question": "I want to improve my conversational Spanish. Can you give me three practical tips for immersion and practice, in an encouraging tone?",
+        "initial_user_prompt": "I'm learning Spanish and want to focus on conversational practice and immersion. Give me some encouraging and practical tips, no boring grammar drills please!"
+    },
+    {
+        "id": 12,
+        "name": "Gardening Advice (Edible Plants)",
+        "preferences": {
+            "content": {
+                "focus": "growing edible plants",
+                "dislikes": "ornamental plants or pesticides",
+                "dislikes_statement": "dislike ornamental plants or pesticides"
+            },
+            "stylistic": {
+                "tone": "informative and nurturing",
+                "format": "step-by-step guidance"
+            }
+        },
+        "follow_up_question": "I want to start an organic herb garden. Can you give me step-by-step advice on growing three easy herbs, with a nurturing tone?",
+        "initial_user_prompt": "I'm getting into gardening, specifically edible plants like vegetables and herbs. I prefer organic methods. No ornamental plants or pesticides, please. Give me some nurturing advice."
+    },
+    {
+        "id": 13,
+        "name": "Music Recommendations (Indie Rock)",
+        "preferences": {
+            "content": {
+                "focus": "indie rock bands/artists",
+                "dislikes": "mainstream pop or classic rock",
+                "dislikes_statement": "dislike mainstream pop or classic rock"
+            },
+            "stylistic": {
+                "tone": "cool, understated, and knowledgeable tone",
+                "format": "brief, intriguing descriptions"
+            }
+        },
+        "follow_up_question": "I'm looking for some new indie rock to discover. Can you recommend three lesser-known bands and give me a cool, intriguing description for each?",
+        "initial_user_prompt": "I'm really into indie rock, especially the more obscure bands. No mainstream stuff or classic rock. Give me some cool recommendations!"
+    },
+    {
+        "id": 14,
+        "name": "Pet Care Advice (Cats)",
+        "preferences": {
+            "content": {
+                "focus": "cat care",
+                "dislikes": "harsh training methods or dog-related topics",
+                "dislikes_statement": "dislike harsh training methods or dog-related topics"
+            },
+            "stylistic": {
+                "tone": "empathetic and gentle",
+                "format": "practical solutions"
+            }
+        },
+        "follow_up_question": "My cat seems a bit bored. Can you suggest three ways to enrich her environment, with empathetic and practical advice?",
+        "initial_user_prompt": "I need some advice on cat care, especially behavior and enrichment. I believe in positive reinforcement. No dog stuff, please. Be gentle and practical."
+    },
+    {
+        "id": 15,
+        "name": "Coding Help (Python Data Analysis)",
+        "preferences": {
+            "content": {
+                "focus": "Python code snippets for data analysis",
+                "dislikes": "theoretical computer science or web development",
+                "dislikes_statement": "dislike theoretical computer science or web development"
+            },
+            "stylistic": {
+                "tone": "clear, concise, and provide runnable code",
+                "format": "runnable code"
+            }
+        },
+        "follow_up_question": "I need a Python snippet to quickly analyze a Pandas DataFrame for missing values. Can you give me a clear, runnable example?",
+        "initial_user_prompt": "I'm working on data analysis in Python, specifically with Pandas and NumPy. I need practical code examples, not theoretical stuff or web dev. Be clear and direct."
+    },
+    {
+        "id": 16,
+        "name": "Philosophy Concepts (Existentialism)",
+        "preferences": {
+            "content": {
+                "focus": "existentialist philosophy concepts",
+                "dislikes": "ancient Greek philosophy or metaphysics",
+                "dislikes_statement": "dislike ancient Greek philosophy or metaphysics"
+            },
+            "stylistic": {
+                "tone": "thought-provoking, introspective tone",
+                "format": "encourage critical thinking"
+            }
+        },
+        "follow_up_question": "Explain the concept of absurdism in existentialism and its real-world implications, in a thought-provoking tone.",
+        "initial_user_prompt": "I'm interested in existentialist philosophy, like absurdism and free will, and how it applies to real life. No ancient Greek stuff, please. Make me think!"
+    },
+    {
+        "id": 17,
+        "name": "Photography Tips (Landscape)",
+        "preferences": {
+            "content": {
+                "focus": "landscape photography",
+                "dislikes": "portraiture or studio photography",
+                "dislikes_statement": "dislike portraiture or studio photography"
+            },
+            "stylistic": {
+                "tone": "artistic and inspiring",
+                "format": "actionable advice"
+            }
+        },
+        "follow_up_question": "I'm going on a trip and want to capture some stunning landscapes. Can you give me three inspiring tips on composition and lighting?",
+        "initial_user_prompt": "I'm passionate about landscape photography. Give me some artistic and inspiring tips on composition and lighting. I'm not really into portraits."
+    },
+    {
+        "id": 18,
+        "name": "Environmental Issues (Renewable Energy)",
+        "preferences": {
+            "content": {
+                "focus": "renewable energy sources",
+                "dislikes": "climate change debates or nuclear energy",
+                "dislikes_statement": "dislike climate change debates or nuclear energy"
+            },
+            "stylistic": {
+                "tone": "informative and optimistic",
+                "format": "present solutions"
+            }
+        },
+        "follow_up_question": "Tell me about the practical benefits of solar energy for homes, in an optimistic and informative way.",
+        "initial_user_prompt": "I'm interested in renewable energy, especially solar and wind. Focus on practical applications and benefits. I want solutions, not debates about climate change."
+    },
+    {
+        "id": 19,
+        "name": "Career Advice (Tech Industry)",
+        "preferences": {
+            "content": {
+                "focus": "career advice for the tech industry",
+                "dislikes": "traditional corporate roles or resume writing",
+                "dislikes_statement": "dislike traditional corporate roles or resume writing"
+            },
+            "stylistic": {
+                "tone": "direct and strategic",
+                "format": "actionable steps"
+            }
+        },
+        "follow_up_question": "I'm a software developer looking to advance my career. What are three strategic steps I can take for skill development and networking in tech?",
+        "initial_user_prompt": "I need career advice for the tech industry, specifically software development or data science. Focus on skill development and networking. I'm not looking for resume tips or corporate ladder stuff. Be direct!"
+    },
+    {
+        "id": 20,
+        "name": "Gaming Strategies (Strategy Games)",
+        "preferences": {
+            "content": {
+                "focus": "strategies for real-time strategy (RTS) or turn-based strategy (TBS) games",
+                "dislikes": "first-person shooters or RPGs",
+                "dislikes_statement": "dislike first-person shooters or RPGs"
+            },
+            "stylistic": {
+                "tone": "analytical and tactical",
+                "format": "clear, step-by-step strategies"
+            }
+        },
+        "follow_up_question": "I'm playing a new RTS game. Can you give me a tactical build order strategy for early game dominance, with clear steps?",
+        "initial_user_prompt": "I'm a big fan of strategy games, especially RTS and TBS. Give me some analytical strategies, focusing on macro-management and build orders. No FPS or RPGs, please. Be tactical!"
+    }
+]
