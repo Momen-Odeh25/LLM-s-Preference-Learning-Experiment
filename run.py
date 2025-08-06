@@ -6,7 +6,7 @@ import re
 
 # Initialize the OpenAI client for API
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "PLACE API KEY"
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 TARGET_LLM_MODEL = "gpt-4o-mini"
@@ -342,4 +342,5 @@ def run_experiment():
 
 if __name__ == "__main__":
     # Run the experiment
+
     results, win_counts = run_experiment()
