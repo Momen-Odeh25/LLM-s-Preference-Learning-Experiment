@@ -4,27 +4,21 @@ import os
 import time
 import re
 
-# --- Configuration ---
-# Initialize the OpenAI client for API v1.0.0+
-# It will use the OPENAI_API_KEY environment variable by default.
-# Ensure your OPENAI_API_KEY environment variable is set.
+# Initialize the OpenAI client for API
+
 OPENAI_API_KEY = "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"
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
-# IMPORTANT: The model name should be one you have access to.
-# Examples: \'gpt-4o\', \'gpt-4-turbo\', \'gpt-3.5-turbo\'
-TARGET_LLM_MODEL = "gpt-4o-mini"  # LLM being tested
-USER_LLM_MODEL = "gpt-4o-mini"    # LLM simulating the user and acting as the judge
-SUMMARIZATION_LLM_MODEL = "gpt-4o-mini" # LLM for summarization
+TARGET_LLM_MODEL = "gpt-4o-mini"
+USER_LLM_MODEL = "gpt-4o-mini"
+SUMMARIZATION_LLM_MODEL = "gpt-4o-mini"
 
 NUM_INTERACTION_TURNS = 10 # 10 user turns, 10 LLM turns
-MAX_TOKENS_PER_CONVERSATION = 8000 # Increased for more context, adjust based on model
+MAX_TOKENS_PER_CONVERSATION = 8000 #
 MAX_RESPONSE_TOKENS = 500 # Max tokens for each LLM response
 
-# Path to the topics data JSON file - UPDATE THIS PATH TO YOUR FILE LOCATION
-TOPICS_DATA_FILE = "topics_data.json"  # Change this to your actual file path
-
-# --- Helper Functions ---
+# Path to the topics data JSON file
+TOPICS_DATA_FILE = "topics_data.json"
 
 def get_chat_completion(messages, model, temperature=0.7):
     """Sends messages to the ChatGPT API and returns the assistant\'s response."""
@@ -146,13 +140,13 @@ def user_llm_as_judge(response_A, response_B, topic_data, user_llm_conversation_
     judge_decision = get_chat_completion(judge_messages, model=USER_LLM_MODEL, temperature=0.1) # Low temperature for decisive answer
     
     if judge_decision:
-        # Use regex to find \'A\' or \'B\' case-insensitively
+        # Use regex to find A or B case-insensitively
         match = re.search(r'[ABab]', judge_decision)
         if match:
             return match.group(0).upper()
-    return None # In case the judge doesn\'t respond with A or B
+    return None
 
-# --- Main Experiment Loop ---
+# Main Experiment
 
 def run_experiment():
     """Main function to run the experiment."""
@@ -207,7 +201,7 @@ def run_experiment():
         conversation_history_target_llm.append({"role": "user", "content": initial_user_prompt})
         experiment_record["full_chat_history"].append({"role": "user", "content": initial_user_prompt})
 
-        # --- Simulate 10 turns of interaction ---
+        # Simulate 10 turns of interaction
         successful_turns = 0
         for turn in range(1, NUM_INTERACTION_TURNS + 1):
             print(f"Turn {turn} - Generating LLM response...")
@@ -249,9 +243,9 @@ def run_experiment():
             print(f"All TARGET LLM turns failed for topic {topic_data["name"]}. Skipping this topic.")
             continue
 
-        # --- USER LLM generates FINAL follow-up question ---
+        # USER LLM generates FINAL follow-up question
         print("\n--- USER LLM generating final follow-up question ---")
-        final_question_messages = list(user_llm_conversation_history) # Use the USER LLM\'s full history
+        final_question_messages = list(user_llm_conversation_history) # Use the USER LLM's full history
         final_question_messages.append({"role": "user", "content": "Now, generate a single, concise final question that specifically tests the AI\'s understanding of your preferences based on our conversation. Respond with ONLY the question."})
         
         final_follow_up_question = get_chat_completion(final_question_messages, USER_LLM_MODEL, temperature=0.5)
@@ -262,7 +256,7 @@ def run_experiment():
             print("Final Follow-up Question: Failed to generate. Skipping topic.")
             continue
 
-        # --- Scenario 1: Full Chat History Test (New Conversation) ---
+        # Scenario 1: Full Chat History Test (New Conversation)
         print("\n--- Running Scenario 1: Full Chat History (New Conversation) ---")
         full_history_test_messages = [
             {"role": "system", "content": f"You are a helpful AI assistant specializing in {topic_data["name"]}. You will be provided with a conversation history and a follow-up question. Your task is to answer the follow-up question based on the provided history, adhering to the user\'s preferences as learned from the conversation."}
@@ -279,7 +273,7 @@ def run_experiment():
         else:
             print("Full History Response: Failed")
 
-        # --- Scenario 2: Summarized Chat History Test (New Conversation) ---
+        # Scenario 2: Summarized Chat History Test (New Conversation)
         print("\n--- Running Scenario 2: Summarized Chat History (New Conversation) ---")
         summary = summarize_conversation(experiment_record["full_chat_history"], SUMMARIZATION_LLM_MODEL)
         experiment_record["generated_summary"] = summary
@@ -300,7 +294,7 @@ def run_experiment():
         else:
             print("Summarized History Response: Failed")
 
-        # --- USER LLM as Judge Evaluation ---
+        # USER LLM as Judge Evaluation
         print("\n--- USER LLM as Judge Evaluation ---")
         if ai_response_full and ai_response_summarized:
             judge_result = user_llm_as_judge(ai_response_full, ai_response_summarized, topic_data, user_llm_conversation_history)
@@ -322,7 +316,7 @@ def run_experiment():
         all_experiment_results.append(experiment_record)
         time.sleep(2) # Pause between topics
 
-    # --- Final Results ---
+    # Final Results
     print("\n--- Experiment Complete ---")
     print("Total Wins:", wins)
 
@@ -338,7 +332,7 @@ def run_experiment():
     else:
         print("No successful experiments to calculate win rates.")
 
-    # --- Save Results ---
+    # Save Results
     output_filename = "llm_preference_experiment_results.json"
     with open(output_filename, "w") as f:
         json.dump(all_experiment_results, f, indent=4)
